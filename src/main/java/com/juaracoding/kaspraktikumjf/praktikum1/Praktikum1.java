@@ -10,39 +10,18 @@ Version 1.0
 
 public class Praktikum1 {
     public static void main(String[] args) {
-        // Deklarasi variabel dengan nama informatif dan nilai maksimal
-        int bilanganBulat1 = Integer.MAX_VALUE; // 2147483647
-        int bilanganBulat2 = 5;
-        byte bilanganByte = Byte.MAX_VALUE; // 127
-        short bilanganShort = Short.MAX_VALUE; // 32767
-        long bilanganLong = Long.MAX_VALUE; // 9223372036854775807
-        float bilanganFloat = Float.MAX_VALUE; // 3.4028235E38
-        double bilanganDouble = Double.MAX_VALUE; // 1.7976931348623157E308
+        // Deklarasi variabel dengan tipe data numerik
+        byte byteVarMax = Byte.MAX_VALUE; //127
+        short shortVarMax = Short.MAX_VALUE; //32767
+        int intVarMax = Integer.MAX_VALUE; //2147483647
+        long longVarMax = Long.MAX_VALUE; //9223372036854775807L
+        float floatVarMax = Float.MAX_VALUE; //3.4028235E38f
+        double doubleVarMax = Double.MAX_VALUE; //3.4028235E38f
 
-        // Perhitungan dengan operator %
-        int sisaBagi = bilanganBulat1 % bilanganBulat2;
+        // Perhitungan aritmatika
+        double hasilPerhitungan = (doubleVarMax / floatVarMax) * intVarMax - longVarMax % shortVarMax + byteVarMax;
 
-        // Perhitungan dengan operator /
-        double hasilBagi = bilanganDouble / bilanganFloat;
-
-        // Perhitungan dengan operator *
-        long hasilKali = bilanganLong * bilanganShort;
-
-        // Perhitungan dengan operator +
-        int hasilJumlah = bilanganBulat1 + bilanganByte;
-
-        // Perhitungan dengan operator -
-        float hasilKurang = bilanganFloat - bilanganBulat2;
-
-        // Menghitung total hasil
-        double totalHasil = sisaBagi + hasilBagi + hasilKali + hasilJumlah + hasilKurang;
-
-        // Menampilkan hasil perhitungan
-        System.out.println("Sisa bagi: " + sisaBagi);
-        System.out.println("Hasil bagi: " + hasilBagi);
-        System.out.println("Hasil kali: " + hasilKali);
-        System.out.println("Hasil jumlah: " + hasilJumlah);
-        System.out.println("Hasil kurang: " + hasilKurang);
-        System.out.println("Total hasil: " + totalHasil);
+        // Cetak hasil perhitungan
+        System.out.println("Hasil perhitungan: " + hasilPerhitungan);
     }
 }
